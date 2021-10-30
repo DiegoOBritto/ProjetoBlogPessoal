@@ -17,24 +17,24 @@ import javax.validation.constraints.Size;
 @Table(name = "tb_postagens") 
 public class Postagem {
 
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
-	private long id; 
+	private long id; //id bigint auto_increment primary key (id)
 
 	
 	@NotNull(message = "O atributo título é Obrigatório!") 
 	@Size(min = 5, max = 100, message = "O atributo título deve conter no mínimo 05 e no máximo 100 caracteres")
-	private String titulo; 
+	private String titulo; //titulo varchar (100) not null
 
 	@NotNull(message = "O atributo texto é Obrigatório!")
 	@Size(min = 10, max = 1000, message = "O atributo texto deve conter no mínimo 10 e no máximo 500 caracteres")
-	private String texto;
+	private String texto; // texto varchar (1000) not null
 
 
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data = new java.sql.Date(System.currentTimeMillis());
-
+	//data Timestamp
+		
 	public long getId() {
 		return id;
 	}
