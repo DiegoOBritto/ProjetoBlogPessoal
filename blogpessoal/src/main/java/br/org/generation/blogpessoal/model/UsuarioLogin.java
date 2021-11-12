@@ -15,6 +15,16 @@ public class UsuarioLogin {
 	private String nome;
 
 	private String usuario;
+	
+	private String senha;
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
 
 	private String token;
 
