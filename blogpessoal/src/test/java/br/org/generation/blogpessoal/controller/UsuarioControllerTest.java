@@ -20,6 +20,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import br.org.generation.blogpessoal.model.Usuario;
+import br.org.generation.blogpessoal.service.UsuarioService;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -28,6 +29,9 @@ public class UsuarioControllerTest {
 	
 	@Autowired
 	private TestRestTemplate testRestTemplate;
+	
+	@Autowired
+	private UsuarioService usuarioService;
 	
 	@Test
 	@Order(1)
